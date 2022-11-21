@@ -1,0 +1,183 @@
+\documentclass[a4paper,oneside,onecolumn,11pt]{report}
+\usepackage{styles/teknofest_cip_tasarim}
+\renewcommand{\labelenumi}{(\roman{enumi})}
+\usepackage{amsmath, amsthm, amssymb}
+ % Some extra symbols
+\usepackage[bottom]{footmisc}
+\usepackage{cite}
+\usepackage{layout}
+\usepackage[]{hyperref}
+\usepackage{graphicx}
+\usepackage[left=2.5cm,top=2.5cm,right=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{longtable}
+\graphicspath{{figures/}} % Graphics will be here
+\usepackage{mathtools}
+%\usepackage[ngerman]{babel} % Or polyglossia
+\usepackage{inconsolata}
+\usepackage{fontspec}
+% \setmainfont[Path = fonts/]{calibri.ttf}
+\setmainfont{calibri}
+   [Path = fonts/, 
+    Extension = .ttf, 
+    BoldFont=*b,
+    ItalicFont=*i,
+    BoldItalicFont=*z]
+%\usepackage{xtab}
+\usepackage{multirow}
+\usepackage{subfigure}
+\usepackage{algorithm}
+\usepackage{algorithmic}
+\usepackage{draftwatermark}
+\usepackage{tikz}
+
+\usepackage{url}
+\usepackage{xcolor}
+%\hypersetup{
+%    colorlinks,
+%    linkcolor={red!50!black},
+%    citecolor={blue!50!black},
+%    urlcolor={blue!80!black}
+%}
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+%\pagestyle{empty}
+%\includeonly{introduction} % To only process the given file
+\makeatletter
+\renewcommand*{\lay@value}[2]{%
+  \strip@pt\dimexpr0.351459\dimexpr\csname#2\endcsname\relax\relax mm%
+}
+\makeatother
+\newtheorem{thm}{Theorem}[chapter]
+\newtheorem{prop}[thm]{Proposition}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+% COVER PAGE
+\teamname{...}
+\projectname{...}
+\applicationid{...}
+
+\SetWatermarkText{\tikz{\node[opacity=0.2]{\includegraphics{filigran.jpg}};}}
+%\SetWatermarkText{\includegraphics{filigran.jpg}}
+\SetWatermarkAngle{0} 
+\SetWatermarkLightness{1}
+
+\begin{document}
+
+\pagenumbering{roman}
+\maketitlepage
+\tableofcontents
+\begin{symbols}
+% The title will be typeset as "LIST OF SYMBOLS".
+%
+% Use a separate \sym command for each symbols definition.
+% First, Latin symbols in alphabetical order
+\sym{GF($p^{k}$)}{Galois Field with order $p^{k}$}
+\sym{$V_{T}$}{Threshold voltage}
+% 1 EMPTY LINE BETWEEN LATIN AND GREEK SYMBOLS GROUP!!!
+\sym{}{}
+% Then Greek symbols in alphabetical order
+\sym{$\mu$}{Population mean}
+\sym{ }{}
+
+\end{symbols}
+
+\begin{abbreviations}
+ % Abbreviations in alphabetical order
+\sym{ASIC}{Application Specific Integrated Circuit}
+\sym{FPGA}{Field Programmable Gate Array}
+\sym{SRAM}{Static Random Access Memory}
+\sym{TSMC}{Taiwan Semiconductor Manufacturing Company}
+\end{abbreviations}
+
+\clearpage
+\chapter{GİRİŞ}
+\label{chapter:giris}
+\pagenumbering{arabic}
+
+\chapter{TASARIM İSTERLERİ}
+\label{chapter:tasarim_isterleri}
+\pagenumbering{arabic}
+
+Bu doküman 2023 TEKNOFEST Çip Tasarım Yarışması kapsamında hazırlanması beklenen raporlar için kullanılması amacıyla hazırlanmıştır. İngilizce rapor için hem .tex dosyasının hem de .sty dosyasının güncellenmesi gerekmektedir. Değiştirilmek istenen kelime aratılıp kolayca İngilizce'si ile değiştirilecektir (örneğin teknofest\_cip\_tasarim.sty dosyasında SEMBOLLER LİSTESİ aratılıp ilgili yerin LIST OF SYMBOLS ile değiştirilmesi şeklinde). Örnek şekil ve çağrılışı şöyle olmaktadır: Şekil \ref{fig:yarisma_logosu}. 
+
+\begin{figure}[htbp]
+	\begin{center}
+		\includegraphics[width=0.3\columnwidth]{cip_tasarim.png}
+		\vskip\baselineskip % Leave a vertical skip below the figure
+		\caption{Yarışma Logosu.}
+		\label{fig:yarisma_logosu}
+	\end{center}
+\end{figure}
+
+Institute of Electrical and Electronics Engineers (IEEE) standardına uygun referans vermek amacına hizmet eden örnek alıntılama biçimi \cite{Lamport1986} olmaktadır. 
+
+
+Örnek Tablo için Tablo \ref{table:ornek_tablo}'a bakılabilir. Caption'ların sonunda nokta olmalıdır.
+
+Birden fazla kaynak referans olarak verildiğinde kaynaklar kaynakça çağrılma sırasına göre dizilmektedir. \cite{IEEEexample:bibtexguide}
+
+\begin{table}[thbp]
+%\vskip\baselineskip 
+\caption[Örnek Tablo]{Örnek Tablo.}
+\begin{center}
+\begin{tabular}{|c|c|c|} \hline
+ & \textbf{Sütun 1}& \textbf{Sütun 2}\\\hline
+\textbf{Satır 1} & Veri 1 & Veri 2 \\\hline
+\textbf{Satır 2} & Veri 3 & Veri 4 \\\hline
+\textbf{Satır 3} & Veri 5 & Veri 6 \\\hline
+\end{tabular}
+\label{table:ornek_tablo}
+\end{center}
+\end{table}
+
+
+
+Örnek dipnot kullanımı için\footnote{Örnek dipnot}  
+
+Madde listesi ise aşağıdaki gibi hazırlanabilir.
+
+
+\begin{itemize}
+ \item Madde 1
+\begin{enumerate}
+ \item Alt madde
+\end{enumerate}
+\item Madde 2
+\item Madde 3
+\end{itemize}
+
+Matematiksel işlemler \eqref{eq:Pearson_Correlation_Function}'taki gibi verilebilir.
+\begin{equation} \label{eq:Pearson_Correlation_Function}
+C (T, P) = \displaystyle \frac{\mu (TP)-\mu (T) \mu (P)}{\sqrt{\sigma ^2 (T) \sigma ^2 (P)}} \\
+\end{equation}
+
+\chapter{TASARIM DETAYLARI}
+\label{chapter:tasarim_detaylari}
+İstenildiği takdirde alt başlıklar oluşturulabilmektedir.
+
+\section{Örnek Bölüm 1}
+\label{section:ornek_bolum_1}
+
+\section{Örnek Bölüm 2}
+\label{section:ornek_bolum_2}
+
+\subsection{Örnek Alt Bölüm 1}
+\label{subsection:ornek_alt_bolum_1}
+
+\subsection{Örnek Alt Bölüm 2}
+\label{subsection:ornek_alt_bolum_2}
+
+\chapter{TAKIM ORGANİZASYONU ve İŞ PLANI}
+\label{chapter:takim_organizasyonu_ve_is_plani}
+
+
+%\cite{*}
+\bibliographystyle{styles/IEEEtran}
+\renewcommand\bibname{KAYNAKÇA}
+\bibliography{references}
+\appendix
+\chapter[ÖRNEK EK]{ÖRNEK EK}
+Ekler referanslardan sonra gelmektedir.
+%\clearpage
+% \layout*
+\end{document}
