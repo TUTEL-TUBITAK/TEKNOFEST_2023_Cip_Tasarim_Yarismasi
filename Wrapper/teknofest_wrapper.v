@@ -31,7 +31,10 @@ module teknofest_wrapper(
   output spi_cs_o,
   output spi_sck_o,
   output spi_mosi_o,
-  input  spi_miso_i
+  input  spi_miso_i,
+  
+  output pwm0_o,
+  output pwm1_o
 );
 
 localparam RAM_DELAY = 16;
@@ -82,7 +85,9 @@ user_processor soc (
   .spi_mosi_o    (spi_mosi_o   ),
   .spi_miso_i    (spi_miso_i   ),
   .uart_tx_o     (uart_tx_o    ),
-  .uart_rx_i     (uart_rx_i    )
+  .uart_rx_i     (uart_rx_i    ),
+  .pwm0_o        (pwm0_o       ),
+  .pwm1_o        (pwm1_o       )
 );
 
 reg [RAM_DELAY-1:0] ram_shift_q;
@@ -123,7 +128,7 @@ teknofest_ram #(
   .NB_COL(4),
   .COL_WIDTH(8),
   .RAM_DEPTH(RAM_DEPTH),
-  .INIT_FILE("")  //Yüklenecek program?n yolu
+  .INIT_FILE("")  //YÃ¼klenecek program?n yolu
 ) main_memory
 (
   .clk_i           (clk_i ),
