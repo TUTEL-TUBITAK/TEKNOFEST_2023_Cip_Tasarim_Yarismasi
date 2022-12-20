@@ -65,7 +65,7 @@ wire [ 3:0] main_mem_wstrb;
 wire        main_mem_rd_en;
 
 reg        ram_ready;
-reg [31:0] timer;
+reg [63:0] timer;
 
 wire   prog_system_reset;
 wire   rst_n;
@@ -114,7 +114,8 @@ end
 
 assign iomem_ready = ram_shift_q[RAM_DELAY-1] | (iomem_valid & (iomem_addr == 32'h3000_0000));
 
-assign iomem_rdata = (iomem_valid & (iomem_addr == 32'h3000_0000)) ? timer : main_mem_rdata;
+assign iomem_rdata = (iomem_valid & (iomem_addr == 32'h3000_0000)) ? timer[31:0]  :
+                     (iomem_valid & (iomem_addr == 32'h3000_0004)) ? timer[63:32] : main_mem_rdata;
 
 assign main_mem_wstrb = iomem_valid & ((iomem_addr & ~RAM_MASK_ADDR) == RAM_BASE_ADDR) ?
                         iomem_wstrb : 4'b0;
@@ -147,9 +148,9 @@ teknofest_ram #(
 
 always @(posedge clk_i) begin
   if (!rst_n) begin
-    timer <= 32'h0;
+    timer <= 64'h0;
   end else begin
-    timer <= timer + 32'h1;
+    timer <= timer + 64'h1;
   end
 end
 
