@@ -1,9 +1,9 @@
 # BAREMETAL ORTAMI
 
-Teknofest 2023 Çip Tasarım Yarışması Sayısal İşlemci Kategorisi yarışma 
+TEKNOFEST 2023 Çip Tasarım Yarışması Sayısal İşlemci Kategorisi yarışma 
 şartnamesine göre Baremetal ortamı oluşturulmuştur. 
 
-[RISC-V Derleyici](https://safirdepo.b3lab.org/shares/public/share/zWyik4Fi8uypDCUcauuIkxjbQcHHuj1Y ), tasarlanması istenilen eklentiler ile birlikte oluşturulmuştur. Ubuntu işletim sisteminde kullanılabilmektedir. Windows üzerinde WSL üzerine kurulmuş Ubuntu ile birliktede kullanılabilir. İsme tıklayarak indirebilirsiniz.
+[RISC-V Derleyici](https://safirdepo.b3lab.org/shares/public/share/zWyik4Fi8uypDCUcauuIkxjbQcHHuj1Y ), tasarlanması istenilen eklentiler ile birlikte oluşturulmuştur. Ubuntu işletim sisteminde kullanılabilmektedir. Windows üzerinde WSL üzerine kurulmuş Ubuntu ile birlikte de kullanılabilir. İsme tıklayarak indirebilirsiniz.
 
 İndirdiğiniz derleyiciyi aşağıdaki adımları izleyerek kullanılabilir hale getirebilirsiniz. 
 
@@ -12,10 +12,10 @@ Teknofest 2023 Çip Tasarım Yarışması Sayısal İşlemci Kategorisi yarışm
 ```
 sudo tar -xvzf riscv.tar.gz -C /opt
 
-export RISCV=/opt/riscv
+export RISCV=/opt/riscv; # bu komutun .bashrc dosyasına eklenmesi sonraki terminal açılışlarında da RISCV değişkeninin tanınmasını sağlayacaktır
 ```
 
-`${RISCV}` komutu ile dizinin tanımlandığını kontrol edebilirsiniz. Baremetal ortamının kullanılabilimesi için bu tanımlamanın yapılaması gerekmektedir.
+`${RISCV}` komutu ile dizinin tanımlandığını kontrol edebilirsiniz. Baremetal ortamının kullanılabilmesi için bu tanımlamanın yapılması gerekmektedir.
 
 Derleme işlemini indirdiğiniz `baremetal-tekno-sw` klasörünün içierisinde gerçekleştirebilirsiniz.
 Örnek olarak oluşturulmuş `tekno_example` uygulamasını aşağıdaki komutlarla derleyebilirsiniz. 
