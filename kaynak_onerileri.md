@@ -56,7 +56,11 @@
 * https://skywater-pdk.readthedocs.io/en/main/ 
 * Opensource-silicon Slack group https://invite.skywater.tools/ 
 * https://github.com/The-OpenROAD-Project/OpenLane 
-* [FOSSi Dial-Up] Tim Ansell - Skywater PDK: Fully open source manufacturable PDK for a 130nm process https://www.youtube.com/watch?v=EczW2IWdnOM&t=4149s 
+* [FOSSi Dial-Up] Tim Ansell - Skywater PDK: Fully open source manufacturable PDK for a 130nm process https://www.youtube.com/watch?v=EczW2IWdnOM&t=4149s
+* [FOSSi Dial-Up] Mohamed Shalan - OpenLane, A Digital ASIC Flow for SkyWater 130nm Open PDK https://www.youtube.com/watch?v=Vhyv0eq_mLU
+* OpenLane Overview https://www.youtube.com/watch?v=d0hPdkYg5QI
+* [stream] Skywater 130nm PDK - Initial Discovery https://www.youtube.com/watch?v=gRYBdTXbxiU
+* Ahmed Ghazy and Mohamed Shalan, "OpenLANE: The Open-Source Digital ASIC Implementation Flow", Article No.21, Workshop on Open-Source EDA Technology (WOSET), 2020. https://github.com/woset-workshop/woset-workshop.github.io/blob/master/PDFs/2020/a21.pdf
 * https://efabless.com/ 
 * https://github.com/dineshannayya/riscduino 
 
