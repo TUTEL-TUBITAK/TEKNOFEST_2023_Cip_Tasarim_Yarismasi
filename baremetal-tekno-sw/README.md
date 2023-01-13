@@ -17,7 +17,7 @@ export RISCV=/opt/riscv; # bu komutun .bashrc dosyasına eklenmesi sonraki termi
 
 `${RISCV}` komutu ile dizinin tanımlandığını kontrol edebilirsiniz. Baremetal ortamının kullanılabilmesi için bu tanımlamanın yapılması gerekmektedir.
 
-Derleme işlemini indirdiğiniz `baremetal-tekno-sw` klasörünün içierisinde gerçekleştirebilirsiniz.
+Derleme işlemini indirdiğiniz `baremetal-tekno-sw` klasörünün içerisinde gerçekleştirebilirsiniz.
 Örnek olarak oluşturulmuş `tekno_example` uygulamasını aşağıdaki komutlarla derleyebilirsiniz. 
 
 ```
@@ -28,4 +28,7 @@ make software PROGRAM=tekno_example BOARD=tekno
 
 Kendi test sistemlerinizi verilen örnekleri ve sürücüleri referans alarak oluşturabilirsiniz.
 
-> **_NOT:_**  `chip/tekno/setting.mk` dosyası içiersindeki `RISCV_ARCH := rv32im` ile kriptoloji ve hızlandırıcı buyrukları kullanılabilir haldedir. Sıkıştırılmış buyrukların kullanılması için `RISCV_ARCH := rv32imc` yapılmalıdır.
+> **_NOT:_**  `chip/tekno/setting.mk` dosyası içerisindeki `RISCV_ARCH := rv32im` ile kriptoloji ve hızlandırıcı buyrukları kullanılabilir haldedir. Sıkıştırılmış buyrukların kullanılması için `RISCV_ARCH := rv32imc` yapılmalıdır.
+
+> **_NOT:_**  Çıktıların arasında yer alan .hex dosyası [Wrapper](https://github.com/TUTEL-TUBITAK/TEKNOFEST_2023_Cip_Tasarim_Yarismasi/tree/main/Wrapper) klasörü altındaki `teknofest_ram.v` dosyasındaki `INIT_FILE` parametresine verilerek ilgili C kodundan üretilen komutlar ile simulasyon gerçekleştirilebilmektedir.
+
