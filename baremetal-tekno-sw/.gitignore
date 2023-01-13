@@ -1,0 +1,7 @@
+*.o
+*.a
+*.asm
+*.hex
+*.bin
+*.elf
+*.bak
