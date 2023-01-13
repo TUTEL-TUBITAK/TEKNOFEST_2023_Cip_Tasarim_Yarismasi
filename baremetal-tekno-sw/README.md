@@ -18,10 +18,14 @@ export RISCV=/opt/riscv
 `${RISCV}` komutu ile dizinin tanımlandığını kontrol edebilirsiniz. Baremetal ortamının kullanılabilimesi için bu tanımlamanın yapılaması gerekmektedir.
 
 Derleme işlemini indirdiğiniz `baremetal-tekno-sw` klasörünün içierisinde gerçekleştirebilirsiniz.
-Örnek olarak oluşturulmuş `tekno_example` uygulamasını aşağıdaki komutlarla derleyebilirsiniz. Kendi test sistemlerinizi verilen örnekleri referans alarak oluşturabilirsiniz.
+Örnek olarak oluşturulmuş `tekno_example` uygulamasını aşağıdaki komutlarla derleyebilirsiniz. 
 
 ```
 cd baremetal-tekno-sw
 
 make software PROGRAM=tekno_example BOARD=tekno
 ```
+
+Kendi test sistemlerinizi verilen örnekleri ve sürücüleri referans alarak oluşturabilirsiniz.
+
+> **_NOT:_**  `chip/tekno/setting.mk` dosyası içiersindeki `RISCV_ARCH := rv32im` ile kriptoloji ve hızlandırıcı buyrukları kullanılabilir haldedir. Sıkıştırılmış buyrukların kullanılması için `RISCV_ARCH := rv32imc` yapılmalıdır.
