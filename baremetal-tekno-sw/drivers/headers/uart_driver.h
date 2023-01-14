@@ -2,18 +2,15 @@
 /// Functions ///
 #include <stdint.h>
 
-void     print           (const char *p);
-void     zputchar        (char c);
-void     print_hex       (uint32_t v, int digits);
-char     zgetchar_prompt (char *prompt);
-char     zgetchar        ();
-int      zscan           (char *buffer, int max_size, int echo);
-void     cmd_echo        ();
-int      strcmp          (const char *p1, const char *p2);
-uint32_t hexstr_to_uint  (char *buffer, uint8_t length);
-uint32_t zscanint_prompt (char *prompt);
-size_t   strlen          (const char *s);
 void     tekno_printf    (const char *fmt, ...);
+void     print           (const char *p);
+int      zscan           (char *buffer, int max_size, int echo);
+char     zgetchar        ();
+void     zputchar        (char c);
+int      strcmp          (const char *p1, const char *p2);
+size_t   strlen          (const char *s);
+int 	 uart_txfull	 ();
+int 	 uart_rxempty	 ();
 
 typedef union
 {

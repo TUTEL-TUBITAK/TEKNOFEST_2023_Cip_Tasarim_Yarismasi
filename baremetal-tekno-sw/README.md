@@ -3,7 +3,7 @@
 TEKNOFEST 2023 Çip Tasarım Yarışması Sayısal İşlemci Kategorisi yarışma 
 şartnamesine göre Baremetal ortamı oluşturulmuştur. 
 
-[RISC-V Derleyici](https://safirdepo.b3lab.org/shares/public/share/zWyik4Fi8uypDCUcauuIkxjbQcHHuj1Y ), tasarlanması istenilen eklentiler ile birlikte oluşturulmuştur. Ubuntu işletim sisteminde kullanılabilmektedir. Windows üzerinde WSL üzerine kurulmuş Ubuntu ile birlikte de kullanılabilir. İsme tıklayarak indirebilirsiniz.
+[RISC-V Derleyici](https://safirdepo.b3lab.org/shares/public/share/MUiPBNExEF6eN94TTHr45YD6gEuNLnGP ), tasarlanması istenilen eklentiler ile birlikte oluşturulmuştur. Ubuntu işletim sisteminde kullanılabilmektedir. Windows üzerinde WSL üzerine kurulmuş Ubuntu ile birlikte de kullanılabilir. İsme tıklayarak indirebilirsiniz.
 
 İndirdiğiniz derleyiciyi aşağıdaki adımları izleyerek kullanılabilir hale getirebilirsiniz. 
 

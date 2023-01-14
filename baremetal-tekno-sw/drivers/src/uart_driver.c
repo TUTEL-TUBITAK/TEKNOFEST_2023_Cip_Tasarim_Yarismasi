@@ -166,51 +166,6 @@ void tekno_printf(const char *fmt, ...)
 	va_end(vl);
 }
 
-
-
-//-----------------------------------------------
-// print a value in hexadecimal.
-//-----------------------------------------------
-
-void print_hex(uint32_t v, int digits)
-{
-	for (int i = 7; i >= 0; i--) {
-		char c = "0123456789abcdef"[(v >> (4*i)) & 15];
-		if (c == '0' && i >= digits) continue;
-		zputchar(c);
-		digits = i;
-	}
-}
-
-//-----------------------------------------------
-// scan a single character with a prompt.
-//-----------------------------------------------
-
-char zgetchar_prompt(char *prompt)
-{
-	int32_t c = -1;
-
-	uint32_t cycles_begin, cycles_now, cycles;
-	__asm__ volatile ("rdcycle %0" : "=r"(cycles_begin));
-
-
-	if (prompt)
-		print(prompt);
-
-	while (c == -1) {
-		__asm__ volatile ("rdcycle %0" : "=r"(cycles_now));
-		cycles = cycles_now - cycles_begin;
-		if (cycles > 100000000) {
-			if (prompt)
-				print(prompt);
-			cycles_begin = cycles_now;
-		}
-		c = UART_RDATA;
-	}
-
-	return c;
-}
-
 //-----------------------------------------------
 // scan a single character.
 //-----------------------------------------------
@@ -225,7 +180,7 @@ char zgetchar()
 {
 	while(1){
 		if (!uart_rxempty()){
-			return zgetchar_prompt(0);;
+			return(char)UART_RDATA;
 		}
 	}
 }
@@ -284,48 +239,6 @@ int strcmp(const char *p1, const char *p2)
 	}
 	while(c1 == c2);
 	return c1 - c2;
-}
-
-//-----------------------------------------------
-// hexstr to uint
-// converts hex-looking ascii input to uint32.
-//-----------------------------------------------
-
-uint32_t hexstr_to_uint(char *buffer, uint8_t length) 
-{
-  uint32_t res = 0, d = 0;
-  char c = 0;
-
-  while (length--) {
-    c = *buffer++;
-
-    if ((c >= '0') && (c <= '9'))
-      d = (uint32_t)(c - '0');
-    else if ((c >= 'a') && (c <= 'f'))
-      d = (uint32_t)((c - 'a') + 10);
-    else if ((c >= 'A') && (c <= 'F'))
-      d = (uint32_t)((c - 'A') + 10);
-    else
-      d = 0;
-
-    res = res + (d << (length*4));
-  }
-
-  return res;
-}
-
-//-----------------------------------------------
-// get integer from console
-// prompts a string, converts input from hexstr
-// to integer, returns the value.
-//-----------------------------------------------
-
-uint32_t zscanint_prompt(char *prompt)
-{
-    print(prompt);
-    char buffer[9];
-    zscan(buffer, 9, 1);
-    return hexstr_to_uint(buffer, strlen(buffer));
 }
 
 //-----------------------------------------------
