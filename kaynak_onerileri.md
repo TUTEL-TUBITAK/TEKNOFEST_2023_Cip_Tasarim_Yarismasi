@@ -48,6 +48,7 @@
 * https://www.eng.biu.ac.il/temanad/digital-vlsi-design/ 
 * https://vlsi-backend-adventure.com/index.html 
 * https://vlsibasic.blogspot.com/ 
+* BİLGEM Teknoloji dergisi 11. sayı https://bilgem.tubitak.gov.tr/yayinlar/
 * Eğer erişiminiz varsa Cadence Online Support, Synopsys SolvNetPlus, Siemens EDA Support Center 
 
  
