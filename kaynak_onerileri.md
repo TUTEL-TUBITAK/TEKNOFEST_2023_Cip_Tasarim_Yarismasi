@@ -62,8 +62,18 @@
 * OpenLane Overview https://www.youtube.com/watch?v=d0hPdkYg5QI
 * [stream] Skywater 130nm PDK - Initial Discovery https://www.youtube.com/watch?v=gRYBdTXbxiU
 * Ahmed Ghazy and Mohamed Shalan, "OpenLANE: The Open-Source Digital ASIC Implementation Flow", Article No.21, Workshop on Open-Source EDA Technology (WOSET), 2020. https://github.com/woset-workshop/woset-workshop.github.io/blob/master/PDFs/2020/a21.pdf
+* https://openlane.readthedocs.io/en/latest/index.html
 * https://efabless.com/ 
 * https://github.com/dineshannayya/riscduino 
+
+### GitHub
+
+* Git Cheat Sheet: https://training.github.com/downloads/github-git-cheat-sheet.pdf
+* GitHub Tipps: https://github.com/git-tips/tips
+* Git Documentation: https://git-scm.com/doc
+* Atlassian Git Tutorials: https://www.atlassian.com/git/tutorials
+* Markdown Cheatsheet: https://enterprise.github.com/downloads/en/markdown-cheatsheet.pdf
+* https://learngitbranching.js.org/
 
  
 ### TEKNOFEST Çip Tasarım Yarışması Eğitim Kayıtları
