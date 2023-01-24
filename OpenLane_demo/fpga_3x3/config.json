@@ -1,0 +1,14 @@
+{
+    "DESIGN_NAME": "grid_clb",
+	"FP_SIZING": "absolute",
+	"DIE_AREA": "0 0 250 250",
+    "VERILOG_FILES": "dir::src/fabric_netlists.v",
+    "CLOCK_PORT": "clk",
+	"CLOCK_NET": "clk prog_clk",
+    "CLOCK_PERIOD": 25.0,
+    "DESIGN_IS_CORE": false,
+	
+	"SYNTH_STRATEGY" : "DELAY 0",
+	"BASE_SDC_FILE" : "dir::src/const.sdc",
+	"FP_PDN_CORE_RING": false
+}

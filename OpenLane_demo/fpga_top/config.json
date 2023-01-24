@@ -1,0 +1,21 @@
+{
+    "DESIGN_NAME": "fpga_top",
+    "VERILOG_FILES": "dir::src/fabric_netlists.v",
+    "CLOCK_PORT": "clk",
+    "CLOCK_PERIOD": 1.0,
+    "DESIGN_IS_CORE": true,
+	"FP_SIZING": "absolute",
+	"DIE_AREA": "0 0 1000 1000",
+	"BASE_SDC_FILE" : "dir::src/const.sdc",
+	
+	"MACRO_PLACEMENT_CFG": "dir::macro_placement.cfg",
+	"DIODE_INSERTION_STRATEGY": 4,
+    "GRT_MAX_DIODE_INS_ITERS": 5,
+    "GRT_ANT_ITERS": 5,
+    "PL_RESIZER_MAX_SLEW_MARGIN": 35,
+	"EXTRA_LEFS":      "/openlane/designs/fpga_3x3/runs/run01/results/final/lef/grid_clb.lef",
+    "EXTRA_GDS_FILES": "/openlane/designs/fpga_3x3/runs/run01/results/final/gds/grid_clb.gds",
+    "EXTRA_LIBS":      "/openlane/designs/fpga_3x3/runs/run01/results/final/lib/grid_clb.lib",
+	
+	"VERILOG_FILES_BLACKBOX": "/openlane/designs/fpga_top/src/lb/grid_clb.v"
+}

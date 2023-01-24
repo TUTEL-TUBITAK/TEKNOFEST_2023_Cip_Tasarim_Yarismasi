@@ -1,0 +1,73 @@
+|==============================================================================|
+|=========                       OpenRAM v1.2.1                       =========|
+|=========                                                            =========|
+|=========               VLSI Design and Automation Lab               =========|
+|=========        Computer Science and Engineering Department         =========|
+|=========            University of California Santa Cruz             =========|
+|=========                                                            =========|
+|=========          Usage help: openram-user-group@ucsc.edu           =========|
+|=========        Development help: openram-dev-group@ucsc.edu        =========|
+|=========                See LICENSE for license info                =========|
+|==============================================================================|
+** Start: 01/22/2023 10:01:02
+Technology: sky130
+Total size: 512 bits
+Word size: 32
+Words: 16
+Banks: 1
+RW ports: 1
+R-only ports: 0
+W-only ports: 0
+DRC/LVS/PEX is only run on the top-level design to save run-time (inline_lvsdrc=True to do inline checking).
+DRC/LVS/PEX is disabled (check_lvsdrc=True to enable).
+Characterization is disabled (using analytical delay models) (analytical_delay=False to simulate).
+Only generating nominal corner timing.
+Words per row: None
+Output files are: 
+/home/yunus/openram_test/sram_outDir/sram_32_16_sky130.lvs
+/home/yunus/openram_test/sram_outDir/sram_32_16_sky130.sp
+/home/yunus/openram_test/sram_outDir/sram_32_16_sky130.v
+/home/yunus/openram_test/sram_outDir/sram_32_16_sky130.lib
+/home/yunus/openram_test/sram_outDir/sram_32_16_sky130.py
+/home/yunus/openram_test/sram_outDir/sram_32_16_sky130.html
+/home/yunus/openram_test/sram_outDir/sram_32_16_sky130.log
+/home/yunus/openram_test/sram_outDir/sram_32_16_sky130.lef
+/home/yunus/openram_test/sram_outDir/sram_32_16_sky130.gds
+** Submodules: 1.7 seconds
+** Placement: 0.0 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 0.4 seconds
+**** Converting blockages: 0.1 seconds
+**** Converting pins: 0.1 seconds
+**** Separating adjacent pins: 0.0 seconds
+*** Finding pins and blockages: 4.7 seconds
+*** Maze routing pins: 50.2 seconds
+**** Retrieving pins: 0.0 seconds
+**** Analyzing pins: 0.0 seconds
+**** Finding blockages: 0.9 seconds
+**** Converting blockages: 0.1 seconds
+**** Converting pins: 1.1 seconds
+**** Separating adjacent pins: 1.1 seconds
+*** Finding pins and blockages: 7.3 seconds
+*** Maze routing supplies: 65.1 seconds
+** Routing: 158.4 seconds
+** Verification: 0.0 seconds
+** SRAM creation: 160.2 seconds
+SP: Writing to /home/yunus/openram_test/sram_outDir/sram_32_16_sky130.sp
+** Spice writing: 0.3 seconds
+GDS: Writing to /home/yunus/openram_test/sram_outDir/sram_32_16_sky130.gds
+** GDS: 0.4 seconds
+LEF: Writing to /home/yunus/openram_test/sram_outDir/sram_32_16_sky130.lef
+** LEF: 0.0 seconds
+LVS: Writing to /home/yunus/openram_test/sram_outDir/sram_32_16_sky130.lvs.sp
+** LVS writing: 0.0 seconds
+LIB: Characterizing... 
+** Characterization: 0.3 seconds
+Config: Writing to /home/yunus/openram_test/sram_outDir/sram_32_16_sky130.py
+** Config: 0.0 seconds
+Datasheet: Writing to /home/yunus/openram_test/sram_outDir/sram_32_16_sky130.html
+** Datasheet: 0.0 seconds
+Verilog: Writing to /home/yunus/openram_test/sram_outDir/sram_32_16_sky130.v
+** Verilog: 0.0 seconds
+** End: 161.3 seconds

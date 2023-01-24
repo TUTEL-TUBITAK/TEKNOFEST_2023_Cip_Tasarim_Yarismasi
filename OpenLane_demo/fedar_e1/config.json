@@ -1,0 +1,27 @@
+{
+    "DESIGN_NAME": "Main",
+    "VERILOG_FILES": "dir::src/Main.v",
+    "CLOCK_PORT": "CLK",
+    "CLOCK_PERIOD": 25.0,
+    "DESIGN_IS_CORE": true,
+	
+	"VDD_NETS": "vccd1",
+	"GND_NETS": "vssd1",
+	
+	"FP_SIZING": "absolute",
+    "DIE_AREA": "0 0 700 700",
+    "PL_TARGET_DENSITY": 0.2,
+	
+	"PL_RESIZER_MAX_SLEW_MARGIN": 40,
+	
+	"FP_PDN_MACRO_HOOKS": "ram vccd1 vssd1 vccd1 vssd1",
+	
+	"MACRO_PLACEMENT_CFG": "dir::macro_placement.cfg",
+	
+	"EXTRA_LEFS":      "/openlane/designs/fedar_e1/src/sram_32_16_sky130.lef",
+    "EXTRA_GDS_FILES": "/openlane/designs/fedar_e1/src/sram_32_16_sky130.gds",
+    "EXTRA_LIBS":      "/openlane/designs/fedar_e1/src/sram_32_16_sky130_TT_1p8V_25C.lib",
+	"RUN_KLAYOUT_XOR": false,
+    "MAGIC_DRC_USE_GDS": false,
+    "QUIT_ON_MAGIC_DRC": false
+}
