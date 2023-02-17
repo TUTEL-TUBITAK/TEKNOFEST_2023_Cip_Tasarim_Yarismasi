@@ -29,8 +29,6 @@ int uart_txfull(){
 void zputchar(char c)
 {
 	while(uart_txfull());
-	if (c == '\n')
-		zputchar('\r');
 	UART_WDATA = c;
 }
 
