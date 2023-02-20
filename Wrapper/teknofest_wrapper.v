@@ -134,8 +134,8 @@ teknofest_ram #(
 (
   .clk_i           (clk_i ),
   .rst_ni          (rst_ni),
-  .wr_addr         (iomem_addr[clogb2(RAM_DEPTH*4)-1:2]),
-  .rd_addr         (iomem_addr[clogb2(RAM_DEPTH*4)-1:2]),
+  .wr_addr         (iomem_addr[clogb2(RAM_DEPTH*4-1):2]),
+  .rd_addr         (iomem_addr[clogb2(RAM_DEPTH*4-1):2]),
   .wr_data         (iomem_wdata),
 
   .wr_strb         (main_mem_wstrb   ),
