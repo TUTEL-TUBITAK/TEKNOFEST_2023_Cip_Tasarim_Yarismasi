@@ -8,6 +8,7 @@
 * Microelectronic Circuits, Sedra/Smith, Oxford University Press 
 * Digital Integrated Circuits: A Design Perspective, Jan M. Rabaey / Borivoje Nikolic / Anantha P. Chandrakasan, Pearson  
 * Mehmet Burak Aykenar 2022-2023 Güz Dönemi TOBB ETÜ Mantıksal Devre Tasarımı dersi (https://www.youtube.com/playlist?list=PLZyLAHn50933YtB32ECJujIskuFJiz8AJ) 
+* Computer Principles and Design in Verilog HDL, Yamin Li
 
  
 ### Bilgisayar Mimarisi & RISC-V 
