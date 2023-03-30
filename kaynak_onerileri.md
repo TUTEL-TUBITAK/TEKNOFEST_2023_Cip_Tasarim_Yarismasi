@@ -42,7 +42,7 @@
 * https://fpgacademy.org/ 
 * https://hdlbits.01xz.net/wiki/Main_Page 
 * https://github.com/drom/awesome-hdl 
- 
+* [SPI NOR FLASH Verilog Model](https://www.winbond.com/hq/support/documentation/?__locale=en&line=%2Fproduct%2Fcode-storage-flash-memory%2Findex.html&family=%2Fproduct%2Fcode-storage-flash-memory%2Fserial-nor-flash%2Findex.html&category=%2F.categories%2Fresources%2Fverilog-model%2F&pno=W25Q256JVxIQ)
 
 ### Çip Tasarım 
 
