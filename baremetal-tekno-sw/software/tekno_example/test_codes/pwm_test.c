@@ -24,8 +24,7 @@ void pwm_test()
 		}
 		else if (!strcmp(buffer, "test")) {		
 			pwm_set_period_counter(0, 100000000);		
-			pwm_set_threshold_counter(0, 0, 5000000);	
-			pwm_set_step_counter(0, 1);				
+			pwm_set_threshold_counter(0, 0, 5000000);					
 			pwm_set_control(0, PWM_STANDARD);	
 			
 			pwm_set_period_counter(1, 100000000);	
